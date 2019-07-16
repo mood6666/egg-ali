@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="renderer" content="webkit"/>
+        <title>Document</title>
+
+        <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    </head>
+    <body>
+        <h1>
+        注册11
+    </h1>
+        <form method="POST" action="/auth?_csrf={{ ctx.csrf | safe }}">
+  username: <input name="username"/>
+  password: <input name="password" type="password"/>
+            <button type="submit">upload</button>
+        </form>
+    </body>
+</html>
