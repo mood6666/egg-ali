@@ -29,8 +29,8 @@ module.exports = appInfo => {
     },
   }
   config.alinode = {
-    appid:'80712',
-    secret: 'b6958e83e8b34277bb0fcc25e94c17e995609e3a',
+    appid:'80713',
+    secret: '386709b810334a66638792a7c263b2fc35e5858d',
   };
   // add your user config here
   const userConfig = {
