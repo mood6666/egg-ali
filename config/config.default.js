@@ -31,6 +31,7 @@ module.exports = appInfo => {
   config.alinode = {
     appid:'82757',
     secret: 'dee9b768fded1da37de06893b92d5d8e52e81368',
+    coredir: ["/root"]
   };
   // add your user config here
   const userConfig = {
