@@ -15,6 +15,8 @@ const createRule = {
   content: 'string'
 }
 
+var dompTestArr = [];
+
 // 获取用户通过 HTTP 传递过来的请求参数。
 // 校验、组装参数。
 // 调用 Service 进行业务处理，必要时处理转换 Service 的返回结果，让它适应用户的需求。
@@ -52,9 +54,28 @@ class HomeController extends HttpController {
     const { ctx } = this;
     // 1. 查询数据
     try{
-      const res = await ctx.service.posts.find({}); // 看文档
-      console.log('ctx.user', ctx.user)
-      await this.success(res);
+      // const res = await ctx.service.posts.find({}); // 看文档
+      // console.log('ctx.user', ctx.user);
+      
+      // await this.success(res);
+
+      var timer = setInterval(() => {
+        console.log('xxxxxxxxx');
+      });
+
+      for(var i = 0; i< 1000; i++) {
+        var data = {};
+        data[i] = i;
+        dompTestArr.push(data);
+      }
+
+      dompTestArr.push(timer);
+      // dompTestArr.push({});
+      await this.success({
+        timerLenth: dompTestArr.length
+      });
+      
+
     } catch(err) {
       await this.fail(err);
     }
