@@ -15,6 +15,7 @@ const createRule = {
   content: 'string'
 }
 
+// 一直存在内存中，不会被回收
 var dompTestArr = [];
 
 // 获取用户通过 HTTP 传递过来的请求参数。
@@ -49,6 +50,7 @@ class HomeController extends HttpController {
   }
   // 查询
   // 查询全部数据
+  // 垃圾代码
   async index() {
     // get请求
     const { ctx } = this;
@@ -59,22 +61,25 @@ class HomeController extends HttpController {
       
       // await this.success(res);
 
-      var timer = setInterval(() => {
-        console.log('xxxxxxxxx');
-      });
+      // var timer = setInterval(() => {
+      //   console.log('xxxxxxxxx');
+      // });
 
-      for(var i = 0; i< 1000; i++) {
-        var data = {};
-        data[i] = i;
-        dompTestArr.push(data);
-      }
+      // for(var i = 0; i< 1000; i++) {
+      //   var data = {};
+      //   data[i] = i;
+      //   dompTestArr.push(data);
+      // }
 
-      dompTestArr.push(timer);
-      // dompTestArr.push({});
-      await this.success({
-        timerLenth: dompTestArr.length
-      });
+      // dompTestArr.push(timer);
+      // // dompTestArr.push({});
+      // await this.success({
+      //   timerLenth: dompTestArr.length
+      // });
       
+      await this.success({
+        timerLenth: 'ok'
+      });
 
     } catch(err) {
       await this.fail(err);
